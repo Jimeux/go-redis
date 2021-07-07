@@ -5,6 +5,10 @@ A sample API using Redis SortedSet for caching.
 - `docker-compose up`
 - `make run`
 
+## Datastores
+- DynamoDB: http://localhost:28000/
+- Redis: `redis-cli -h 127.0.0.1 -p 26379`
+
 ## Endpoints
 ```bash
 curl -XPOST -H "Content-Type: application/json" \
