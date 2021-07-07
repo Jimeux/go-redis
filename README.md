@@ -1,6 +1,10 @@
 # go-redis
 A sample API using Redis SortedSet for caching.
 
+## Setup
+- `docker-compose up`
+- `make run`
+
 ## Endpoints
 ```bash
 curl -XPOST -H "Content-Type: application/json" \
