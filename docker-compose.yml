@@ -1,0 +1,15 @@
+version: "3"
+services:
+  redis:
+    image: redis:6.2.4-alpine
+    container_name: go-redis-redis
+    volumes:
+      - .local/redis:/data
+    ports:
+      - "26379:6379"
+  dynamodb:
+    image: instructure/dynamo-local-admin
+    volumes:
+      - .local/dynamodb:/home/dynamodblocal/data
+    ports:
+      - "28000:8000"
