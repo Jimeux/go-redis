@@ -3,6 +3,7 @@ A sample API using Redis SortedSet for caching.
 
 ## Setup
 - `docker-compose up`
+- `make init-db`
 - `make run`
 
 ## Datastores
@@ -12,7 +13,7 @@ A sample API using Redis SortedSet for caching.
 ## Endpoints
 ```bash
 curl -XPOST -H "Content-Type: application/json" \
--d '{"title": "Threaddy"}' \
+-d '{"title": "Thread 1"}' \
 "localhost:8888/threads" | jq
 ```
 ```bash
@@ -24,7 +25,7 @@ curl -XPOST -H "Content-Type: application/json" \
 -d '{
   "thread_id": 
   "01FA0VNJWRCA1TRWGB4BSJEE57", 
-  "content": "Hello 1", 
+  "content": "Message 1",
   "user_id": 1
 }' "localhost:8888/messages" | jq
 ```
